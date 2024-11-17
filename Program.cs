@@ -1,11 +1,14 @@
 ﻿using Banking_app_project.Entidades;
+using Banking_app_project.Entidades.Exceptions;
 using Banking_app_project.Servicos;
+using System.Linq;
 
 namespace Banking_app_project {
     internal class Program {
         static void Main(string[] args) {
 
-            SortedSet<Conta> Set = new SortedSet<Conta>(); // guardar as contas dos dois tipos
+            SortedSet<Conta> Set = new SortedSet<Conta>(); // guardar as contas dos dois tipo
+            Set.Add(new ContaComum("9999999999", "Rafael Yamada", "rafa@gmail.com", "4132", new Carteira()));
 
             Console.WriteLine("CADASTRO: ");
             Console.Write("Nome: ");
@@ -40,14 +43,33 @@ namespace Banking_app_project {
             double Quantia = double.Parse(Console.ReadLine());
             Console.Write("Confirme a senha: ");
             string SenhaConf = Console.ReadLine();
+
             if (SenhaConf.Equals(Conta.Senha)) {  // Sem ToUpper() pois a senha precisa bater 100% da caixa alta/baixa.
                 DepositarServico Dep = new DepositarServico();
                 Dep.Depositar(Conta, Quantia);
                 Console.WriteLine("Depósito realizado, saldo atual " + Conta.Carteira.Saldo); // Mostra o depósito inicial
             }
 
+            if (Conta is ContaComum) {
 
-           
+                Console.Write("Informe a quantia que você irá transferir: ");
+                int Valor = int.Parse(Console.ReadLine());
+                Console.Write("Informe a chave pix (Email) da conta recebente: ");
+                string Chave = Console.ReadLine();
+                foreach (var Item in Set) {
+                    if (Item.Email.Equals(Chave)) {
+                        try {
+                            Conta Origem = Item;
+                            TransferenciaServico Transf = new TransferenciaServico();
+                            Transf.Transferencia(Conta, Item, Valor);
+                            Console.WriteLine("Transferência realizada.");
+                        }
+                        catch (ContaException Ex) {
+                            Console.WriteLine(Ex.Message);
+                        }
+                    }
+                }
+            }
         }
     }
 }

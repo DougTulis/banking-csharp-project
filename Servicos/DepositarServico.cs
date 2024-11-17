@@ -9,6 +9,7 @@ namespace Banking_app_project.Servicos {
     internal class DepositarServico {
 
         public void Depositar(Conta Conta, double Quantia) {
+            
             Conta.Carteira.Saldo += Quantia;
         }
     }

@@ -9,11 +9,10 @@ namespace Banking_app_project.Entidades {
 
         public string Cpf { get; private set; }
 
-        public ContaComum (string cpf, string nome, string email, string senha, Carteira Carteira) : base(nome, email, senha, Carteira) {
+        public ContaComum(string cpf, string nome, string email, string senha, Carteira Carteira) : base(nome, email, senha, Carteira) {
             Cpf = cpf;
 
         }
-
         public ContaComum() {
         
         }
@@ -31,6 +30,6 @@ namespace Banking_app_project.Entidades {
             return Nome + ", " + Cpf;
         }
 
- 
+     
     }
 }

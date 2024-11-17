@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Banking_app_project.Entidades {
-    internal abstract class Conta {
+    internal abstract class Conta : IComparable<Conta> {
 
         public string Nome { get; private set; }
         public string Email { get; private set; }
@@ -20,6 +20,10 @@ namespace Banking_app_project.Entidades {
             Email = email;
             Senha = senha;
             this.Carteira = Carteira; 
+        }
+
+        public int CompareTo(Conta? other) {
+            return Email.CompareTo(other.Email);
         }
     }
 }
