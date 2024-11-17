@@ -13,6 +13,17 @@ namespace Banking_app_project.Entidades {
             Cnpj = cnpj;
         }
 
+        public override bool Equals(object? obj) {
+            return obj is ContaLojista lojista &&
+                   Cnpj == lojista.Cnpj;
+        }
+
+        public override int GetHashCode() {
+            return HashCode.Combine(Cnpj);
+        }
+        public override string ToString() {
+            return Nome + ", " + Cnpj;
+        }
 
     }
 }

@@ -12,5 +12,18 @@ namespace Banking_app_project.Entidades {
         public ContaComum(string cpf, string nome, string email, string senha) : base (nome,email,senha)  {
             Cpf = cpf;
         }
+
+        public override bool Equals(object? obj) {
+            return obj is ContaComum comum &&
+                   Cpf == comum.Cpf;
+        }
+
+        public override int GetHashCode() {
+            return HashCode.Combine(Cpf);
+        }
+
+        public override string ToString() {
+            return Nome + ", " + Cpf;
+        }
     }
 }
