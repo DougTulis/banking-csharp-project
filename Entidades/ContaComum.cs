@@ -9,8 +9,14 @@ namespace Banking_app_project.Entidades {
 
         public string Cpf { get; private set; }
 
-        public ContaComum(string cpf, string nome, string email, string senha) : base (nome,email,senha)  {
+
+
+        public ContaComum(string cpf, string nome, string email, string senha) : base(nome, email, senha) {
             Cpf = cpf;
+
+        }
+
+        public ContaComum() {
         }
 
         public override bool Equals(object? obj) {

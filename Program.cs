@@ -6,12 +6,14 @@ namespace Banking_app_project {
 
             SortedSet<Conta> Set = new SortedSet<Conta>(); // guardar as contas dos dois tipos
 
-            Conta Conta;
             Console.WriteLine("CADASTRO: ");
             Console.Write("Nome: ");
             string Nome = Console.ReadLine();
             Console.Write("Informe o tipo de conta: ");
             string TipoConta = Console.ReadLine();
+
+            var Conta = FacMethod.InstanciarConta(TipoConta);
+
             if (TipoConta.ToUpper().Equals("COMUM")) { // Efeito comparativo com caixa alta
                 Console.Write("Digite o Email: ");
                 string Email = Console.ReadLine();
@@ -32,11 +34,9 @@ namespace Banking_app_project {
                 Conta = new ContaComum(Cnpj, Nome, Email, Senha); //Fenômeno do upcasting
                 Set.Add(Conta);
             }
-
-            foreach (var item in Set)
-            {
-                Console.WriteLine(item);
-            }
+            Console.WriteLine(Conta.Email);
+            Console.Write("Informe a quantia de depósito inicial: ");
+            double quantia = double.Parse(Console.ReadLine());
 
         }
     }

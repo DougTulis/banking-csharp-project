@@ -9,6 +9,9 @@ namespace Banking_app_project.Entidades {
 
         public string Cnpj { get; private set; }
 
+        public ContaLojista() {
+        }
+
         public ContaLojista(string cnpj, string nome, string email, string senha) : base(nome, email, senha) {
             Cnpj = cnpj;
         }
