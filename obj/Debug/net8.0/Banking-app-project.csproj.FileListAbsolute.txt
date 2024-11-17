@@ -1,0 +1,15 @@
+C:\Users\Família\source\repos\Banking-app-project\Banking-app-project\bin\Debug\net8.0\Banking-app-project.exe
+C:\Users\Família\source\repos\Banking-app-project\Banking-app-project\bin\Debug\net8.0\Banking-app-project.deps.json
+C:\Users\Família\source\repos\Banking-app-project\Banking-app-project\bin\Debug\net8.0\Banking-app-project.runtimeconfig.json
+C:\Users\Família\source\repos\Banking-app-project\Banking-app-project\bin\Debug\net8.0\Banking-app-project.dll
+C:\Users\Família\source\repos\Banking-app-project\Banking-app-project\bin\Debug\net8.0\Banking-app-project.pdb
+C:\Users\Família\source\repos\Banking-app-project\Banking-app-project\obj\Debug\net8.0\Banking-app-project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Família\source\repos\Banking-app-project\Banking-app-project\obj\Debug\net8.0\Banking-app-project.AssemblyInfoInputs.cache
+C:\Users\Família\source\repos\Banking-app-project\Banking-app-project\obj\Debug\net8.0\Banking-app-project.AssemblyInfo.cs
+C:\Users\Família\source\repos\Banking-app-project\Banking-app-project\obj\Debug\net8.0\Banking-app-project.csproj.CoreCompileInputs.cache
+C:\Users\Família\source\repos\Banking-app-project\Banking-app-project\obj\Debug\net8.0\Banking-app-project.sourcelink.json
+C:\Users\Família\source\repos\Banking-app-project\Banking-app-project\obj\Debug\net8.0\Banking-app-project.dll
+C:\Users\Família\source\repos\Banking-app-project\Banking-app-project\obj\Debug\net8.0\refint\Banking-app-project.dll
+C:\Users\Família\source\repos\Banking-app-project\Banking-app-project\obj\Debug\net8.0\Banking-app-project.pdb
+C:\Users\Família\source\repos\Banking-app-project\Banking-app-project\obj\Debug\net8.0\Banking-app-project.genruntimeconfig.cache
+C:\Users\Família\source\repos\Banking-app-project\Banking-app-project\obj\Debug\net8.0\ref\Banking-app-project.dll
